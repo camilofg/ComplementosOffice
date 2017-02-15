@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTree">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTreeResult" type="tns:WordGrandPaNode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WordGrandPaNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NodosPadres" type="tns:ArrayOfWordParentNode" />
+          <s:element minOccurs="0" maxOccurs="1" name="NodosHijos" type="tns:ArrayOfWordSonNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWordParentNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WordParentNode" nillable="true" type="tns:WordParentNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WordParentNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CVSCodigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVSDescripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWordSonNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WordSonNode" nillable="true" type="tns:WordSonNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WordSonNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVSDescripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVSCodigo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetModules">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetModulesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModulesResult" type="tns:ArrayOfLoadComboBox" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLoadComboBox">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LoadComboBox" nillable="true" type="tns:LoadComboBox" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoadComboBox">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuxId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStoredProcedures">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModuloID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStoredProceduresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStoredProceduresResult" type="tns:ArrayOfLoadComboBox" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WordGrandPaNode" nillable="true" type="tns:WordGrandPaNode" />
+      <s:element name="ArrayOfLoadComboBox" nillable="true" type="tns:ArrayOfLoadComboBox" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTreeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTree" />
+  </wsdl:message>
+  <wsdl:message name="GetTreeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModules" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStoredProceduresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStoredProcedures" />
+  </wsdl:message>
+  <wsdl:message name="GetStoredProceduresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStoredProceduresResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTreeHttpGetIn">
+    <wsdl:part name="SPName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTreeHttpGetOut">
+    <wsdl:part name="Body" element="tns:WordGrandPaNode" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesHttpGetIn" />
+  <wsdl:message name="GetModulesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="GetStoredProceduresHttpGetIn">
+    <wsdl:part name="ModuloID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStoredProceduresHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="GetTreeHttpPostIn">
+    <wsdl:part name="SPName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTreeHttpPostOut">
+    <wsdl:part name="Body" element="tns:WordGrandPaNode" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesHttpPostIn" />
+  <wsdl:message name="GetModulesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="GetStoredProceduresHttpPostIn">
+    <wsdl:part name="ModuloID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStoredProceduresHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:portType name="WsWordArbolVariablesSoap">
+    <wsdl:operation name="GetTree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Armar arbol de Variables&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene las tablas para armar el arbol de variables y genera el xml&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetTreeSoapIn" />
+      <wsdl:output message="tns:GetTreeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Modulos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los modulos del ERP que usan el addin de word&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesSoapIn" />
+      <wsdl:output message="tns:GetModulesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Procedimientos Almacenados&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene el procedimiento almacenado para armar cada arbol de variables&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetStoredProceduresSoapIn" />
+      <wsdl:output message="tns:GetStoredProceduresSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WsWordArbolVariablesHttpGet">
+    <wsdl:operation name="GetTree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Armar arbol de Variables&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene las tablas para armar el arbol de variables y genera el xml&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetTreeHttpGetIn" />
+      <wsdl:output message="tns:GetTreeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Modulos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los modulos del ERP que usan el addin de word&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesHttpGetIn" />
+      <wsdl:output message="tns:GetModulesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Procedimientos Almacenados&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene el procedimiento almacenado para armar cada arbol de variables&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetStoredProceduresHttpGetIn" />
+      <wsdl:output message="tns:GetStoredProceduresHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WsWordArbolVariablesHttpPost">
+    <wsdl:operation name="GetTree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Armar arbol de Variables&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene las tablas para armar el arbol de variables y genera el xml&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetTreeHttpPostIn" />
+      <wsdl:output message="tns:GetTreeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Modulos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los modulos del ERP que usan el addin de word&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesHttpPostIn" />
+      <wsdl:output message="tns:GetModulesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Procedimientos Almacenados&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene el procedimiento almacenado para armar cada arbol de variables&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetStoredProceduresHttpPostIn" />
+      <wsdl:output message="tns:GetStoredProceduresHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsWordArbolVariablesSoap" type="tns:WsWordArbolVariablesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTree">
+      <soap:operation soapAction="http://tempuri.org/GetTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <soap:operation soapAction="http://tempuri.org/GetModules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <soap:operation soapAction="http://tempuri.org/GetStoredProcedures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsWordArbolVariablesSoap12" type="tns:WsWordArbolVariablesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTree">
+      <soap12:operation soapAction="http://tempuri.org/GetTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <soap12:operation soapAction="http://tempuri.org/GetModules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <soap12:operation soapAction="http://tempuri.org/GetStoredProcedures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsWordArbolVariablesHttpGet" type="tns:WsWordArbolVariablesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetTree">
+      <http:operation location="/GetTree" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <http:operation location="/GetModules" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <http:operation location="/GetStoredProcedures" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsWordArbolVariablesHttpPost" type="tns:WsWordArbolVariablesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetTree">
+      <http:operation location="/GetTree" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <http:operation location="/GetModules" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoredProcedures">
+      <http:operation location="/GetStoredProcedures" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsWordArbolVariables">
+    <wsdl:port name="WsWordArbolVariablesSoap" binding="tns:WsWordArbolVariablesSoap">
+      <soap:address location="http://desarrollo/sincook/ERPNET/Comunicaciones/ServiciosWeb/WsWordArbolVariables.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsWordArbolVariablesSoap12" binding="tns:WsWordArbolVariablesSoap12">
+      <soap12:address location="http://desarrollo/sincook/ERPNET/Comunicaciones/ServiciosWeb/WsWordArbolVariables.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsWordArbolVariablesHttpGet" binding="tns:WsWordArbolVariablesHttpGet">
+      <http:address location="http://desarrollo/sincook/ERPNET/Comunicaciones/ServiciosWeb/WsWordArbolVariables.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsWordArbolVariablesHttpPost" binding="tns:WsWordArbolVariablesHttpPost">
+      <http:address location="http://desarrollo/sincook/ERPNET/Comunicaciones/ServiciosWeb/WsWordArbolVariables.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

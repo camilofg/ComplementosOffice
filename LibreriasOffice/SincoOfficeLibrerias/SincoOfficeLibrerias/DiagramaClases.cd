@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Clases de Administración de usuarios y accesos">
+    <Position X="0.5" Y="0.5" Height="0.542" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Clases Auxiliares">
+    <Position X="3.146" Y="0.5" Height="0.542" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Clases de Manipulacioón de información, Lógica de negocio">
+    <Position X="5.417" Y="0.5" Height="0.604" Width="1.7" />
+  </Comment>
+  <Class Name="SincoOfficeLibrerias.Conexiones" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAEAIAAAEAAAAAAAAAABAAAAAAAAAQAAA=</HashCode>
+      <FileName>Librerias\Conexiones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.ControlErrores" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Librerias\ControlErrores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.Controles" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBTiAAgBiYBQAAAIUAAkEAAAAAKAgCYDCAAgAhIQAQ=</HashCode>
+      <FileName>Librerias\Controles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.Licencias" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAgBAAQAAAAAggAAAAAAIAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Librerias\Licencias.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.Login" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAAyABARJAAACAAQAoQAAAAAAAoASAQAAAAEAQAY=</HashCode>
+      <FileName>Librerias\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.Plantillas" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAABAAgAAAAQAAIAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Librerias\Plantillas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.RegistroWindows" Collapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Librerias\RegistroWindows.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.TripleDESencryption" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAgAAAAAAgA=</HashCode>
+      <FileName>Librerias\TripleDESencryption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.ValidacionesDatos" Collapsed="true">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAQAAAAAAAAAAAAAAAYAAACAAAAAAgAII=</HashCode>
+      <FileName>Librerias\ValidacionesDatos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SincoOfficeLibrerias.XML" Collapsed="true">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAIAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Librerias\XML.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

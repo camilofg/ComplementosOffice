@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AppSincoProject.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppSincoProject_WsProjectERPref_WSProjectERPtest" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desarrollo.sinco.net/sincook/erpnet/comunicaciones/serviciosweb/wsprojecterptest.asmx</Value>
+    </Setting>
+    <Setting Name="AppSincoProject_WsFestivosRef_WsCalcFestivos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desarrollo/sincook/ERPNET/Comunicaciones/ServiciosWeb/WsCalcFestivos.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

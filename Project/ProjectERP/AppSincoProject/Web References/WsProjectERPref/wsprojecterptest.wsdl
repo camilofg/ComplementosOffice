@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetModules">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetModulesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModulesResult" type="tns:ArrayOfLoadComboBox" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLoadComboBox">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LoadComboBox" nillable="true" type="tns:LoadComboBox" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoadComboBox">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuxId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProjects">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ModuloID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectsResult" type="tns:ArrayOfLoadComboBox" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrgId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadProjectResult" type="tns:UpperGanttNode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpperGanttNode">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdProject" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescProject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DurationUnits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkUnits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WeekStart" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HoursPerDay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HoursPerWeek" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduledStart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduledFinish" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ScheduledDuration" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WeekExceptions" type="tns:ArrayOfConfigDays" />
+          <s:element minOccurs="0" maxOccurs="1" name="Exceptions" type="tns:ArrayOfExceptionNodes" />
+          <s:element minOccurs="0" maxOccurs="1" name="LowerGanttNodes" type="tns:ArrayOfGanttNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConfigDays">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConfigDays" nillable="true" type="tns:ConfigDays" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConfigDays">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MorningStart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MorningDuration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AfternoonStart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AfternoonDuration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfigOperation" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfExceptionNodes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExceptionNodes" nillable="true" type="tns:ExceptionNodes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExceptionNodes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ExceptionId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExceptionPrgId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExceptionName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExceptionStart" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExceptionFinish" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGanttNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GanttNode" nillable="true" type="tns:GanttNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GanttNode">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeginDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duration" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PercentAdvanced" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentGanttNode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrecendentGanttNode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProyectoID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaskNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Asignaciones" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveConfigs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgDescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgModulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgObservarciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EstadoEstado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgUnidadesTrabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgUnidadesDuracion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgHorasDia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgHorasSemana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgInicioProgramado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgFinProgramado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrgDuracionProgramada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrgWeekStart" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveConfigsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveConfigsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveWeekExceptions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dia" type="tns:ConfigDays" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveWeekExceptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveWeekExceptionsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveProjectResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportarErrorExterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="tns:ErroresAplicaciones2" />
+            <s:element minOccurs="0" maxOccurs="1" name="InformacionMaquina" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ErroresAplicaciones2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StackTrace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InnerException" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fuente" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportarErrorExternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportarErrorExternoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfLoadComboBox" nillable="true" type="tns:ArrayOfLoadComboBox" />
+      <s:element name="UpperGanttNode" nillable="true" type="tns:UpperGanttNode" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetModulesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModules" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjects" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadProject" />
+  </wsdl:message>
+  <wsdl:message name="LoadProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveConfigsSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveConfigs" />
+  </wsdl:message>
+  <wsdl:message name="SaveConfigsSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveConfigsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveWeekExceptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveWeekExceptions" />
+  </wsdl:message>
+  <wsdl:message name="SaveWeekExceptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveWeekExceptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveProject" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportarErrorExternoSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportarErrorExterno" />
+  </wsdl:message>
+  <wsdl:message name="ReportarErrorExternoSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportarErrorExternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesHttpGetIn" />
+  <wsdl:message name="GetModulesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpGetIn">
+    <wsdl:part name="UsuarioID" type="s:string" />
+    <wsdl:part name="ModuloID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="LoadProjectHttpGetIn">
+    <wsdl:part name="PrgId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoadProjectHttpGetOut">
+    <wsdl:part name="Body" element="tns:UpperGanttNode" />
+  </wsdl:message>
+  <wsdl:message name="SaveConfigsHttpGetIn">
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="PrgId" type="s:string" />
+    <wsdl:part name="PrgDescripcion" type="s:string" />
+    <wsdl:part name="PrgModulo" type="s:string" />
+    <wsdl:part name="PrgObservarciones" type="s:string" />
+    <wsdl:part name="EstadoEstado" type="s:string" />
+    <wsdl:part name="PrgUnidadesTrabajo" type="s:string" />
+    <wsdl:part name="PrgUnidadesDuracion" type="s:string" />
+    <wsdl:part name="PrgHorasDia" type="s:string" />
+    <wsdl:part name="PrgHorasSemana" type="s:string" />
+    <wsdl:part name="PrgInicioProgramado" type="s:string" />
+    <wsdl:part name="PrgFinProgramado" type="s:string" />
+    <wsdl:part name="PrgDuracionProgramada" type="s:string" />
+    <wsdl:part name="PrgUsuario" type="s:string" />
+    <wsdl:part name="PrgWeekStart" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveConfigsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectHttpGetIn">
+    <wsdl:part name="xmlDoc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesHttpPostIn" />
+  <wsdl:message name="GetModulesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpPostIn">
+    <wsdl:part name="UsuarioID" type="s:string" />
+    <wsdl:part name="ModuloID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadComboBox" />
+  </wsdl:message>
+  <wsdl:message name="LoadProjectHttpPostIn">
+    <wsdl:part name="PrgId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoadProjectHttpPostOut">
+    <wsdl:part name="Body" element="tns:UpperGanttNode" />
+  </wsdl:message>
+  <wsdl:message name="SaveConfigsHttpPostIn">
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="PrgId" type="s:string" />
+    <wsdl:part name="PrgDescripcion" type="s:string" />
+    <wsdl:part name="PrgModulo" type="s:string" />
+    <wsdl:part name="PrgObservarciones" type="s:string" />
+    <wsdl:part name="EstadoEstado" type="s:string" />
+    <wsdl:part name="PrgUnidadesTrabajo" type="s:string" />
+    <wsdl:part name="PrgUnidadesDuracion" type="s:string" />
+    <wsdl:part name="PrgHorasDia" type="s:string" />
+    <wsdl:part name="PrgHorasSemana" type="s:string" />
+    <wsdl:part name="PrgInicioProgramado" type="s:string" />
+    <wsdl:part name="PrgFinProgramado" type="s:string" />
+    <wsdl:part name="PrgDuracionProgramada" type="s:string" />
+    <wsdl:part name="PrgUsuario" type="s:string" />
+    <wsdl:part name="PrgWeekStart" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveConfigsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectHttpPostIn">
+    <wsdl:part name="xmlDoc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:portType name="WSProjectERPtestSoap">
+    <wsdl:operation name="GetModules">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Modulos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los modulos del ERP&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesSoapIn" />
+      <wsdl:output message="tns:GetModulesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Proyectos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los Proyectos por modulo y a los que tiene acceso el usuario&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetProjectsSoapIn" />
+      <wsdl:output message="tns:GetProjectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Carga Proyectos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Carga el Proyecto seleccionado&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:LoadProjectSoapIn" />
+      <wsdl:output message="tns:LoadProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guardar Configuración&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda la Configuracion Basica&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveConfigsSoapIn" />
+      <wsdl:output message="tns:SaveConfigsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWeekExceptions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guardar Excepciones semanales&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda la Configuracion de Excepciones semanales&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveWeekExceptionsSoapIn" />
+      <wsdl:output message="tns:SaveWeekExceptionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guarda las Excepciones (Festivos) y las TAREAS en base de datos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda el proyecto&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveProjectSoapIn" />
+      <wsdl:output message="tns:SaveProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportarErrorExterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra errores de Project-Addins</wsdl:documentation>
+      <wsdl:input message="tns:ReportarErrorExternoSoapIn" />
+      <wsdl:output message="tns:ReportarErrorExternoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSProjectERPtestHttpGet">
+    <wsdl:operation name="GetModules">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Modulos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los modulos del ERP&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesHttpGetIn" />
+      <wsdl:output message="tns:GetModulesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Proyectos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los Proyectos por modulo y a los que tiene acceso el usuario&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetProjectsHttpGetIn" />
+      <wsdl:output message="tns:GetProjectsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Carga Proyectos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Carga el Proyecto seleccionado&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:LoadProjectHttpGetIn" />
+      <wsdl:output message="tns:LoadProjectHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guardar Configuración&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda la Configuracion Basica&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveConfigsHttpGetIn" />
+      <wsdl:output message="tns:SaveConfigsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guarda las Excepciones (Festivos) y las TAREAS en base de datos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda el proyecto&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveProjectHttpGetIn" />
+      <wsdl:output message="tns:SaveProjectHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSProjectERPtestHttpPost">
+    <wsdl:operation name="GetModules">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Modulos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los modulos del ERP&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetModulesHttpPostIn" />
+      <wsdl:output message="tns:GetModulesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Obtener Proyectos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Obtiene los Proyectos por modulo y a los que tiene acceso el usuario&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetProjectsHttpPostIn" />
+      <wsdl:output message="tns:GetProjectsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Carga Proyectos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Carga el Proyecto seleccionado&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:LoadProjectHttpPostIn" />
+      <wsdl:output message="tns:LoadProjectHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guardar Configuración&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda la Configuracion Basica&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveConfigsHttpPostIn" />
+      <wsdl:output message="tns:SaveConfigsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div  style='font-size:14px'&gt;&lt;b&gt;Guarda las Excepciones (Festivos) y las TAREAS en base de datos&lt;/b&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style='font-size:12px'&gt;Guarda el proyecto&lt;/div&gt;</wsdl:documentation>
+      <wsdl:input message="tns:SaveProjectHttpPostIn" />
+      <wsdl:output message="tns:SaveProjectHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSProjectERPtestSoap" type="tns:WSProjectERPtestSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetModules">
+      <soap:operation soapAction="http://tempuri.org/GetModules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <soap:operation soapAction="http://tempuri.org/GetProjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <soap:operation soapAction="http://tempuri.org/LoadProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <soap:operation soapAction="http://tempuri.org/SaveConfigs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWeekExceptions">
+      <soap:operation soapAction="http://tempuri.org/SaveWeekExceptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <soap:operation soapAction="http://tempuri.org/SaveProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportarErrorExterno">
+      <soap:operation soapAction="http://tempuri.org/ReportarErrorExterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSProjectERPtestSoap12" type="tns:WSProjectERPtestSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetModules">
+      <soap12:operation soapAction="http://tempuri.org/GetModules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <soap12:operation soapAction="http://tempuri.org/GetProjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <soap12:operation soapAction="http://tempuri.org/LoadProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <soap12:operation soapAction="http://tempuri.org/SaveConfigs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWeekExceptions">
+      <soap12:operation soapAction="http://tempuri.org/SaveWeekExceptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <soap12:operation soapAction="http://tempuri.org/SaveProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportarErrorExterno">
+      <soap12:operation soapAction="http://tempuri.org/ReportarErrorExterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSProjectERPtestHttpGet" type="tns:WSProjectERPtestHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetModules">
+      <http:operation location="/GetModules" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <http:operation location="/GetProjects" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <http:operation location="/LoadProject" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <http:operation location="/SaveConfigs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <http:operation location="/SaveProject" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSProjectERPtestHttpPost" type="tns:WSProjectERPtestHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetModules">
+      <http:operation location="/GetModules" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <http:operation location="/GetProjects" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProject">
+      <http:operation location="/LoadProject" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigs">
+      <http:operation location="/SaveConfigs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProject">
+      <http:operation location="/SaveProject" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSProjectERPtest">
+    <wsdl:port name="WSProjectERPtestSoap" binding="tns:WSProjectERPtestSoap">
+      <soap:address location="http://desarrollo.sinco.net/sincook/erpnet/comunicaciones/serviciosweb/wsprojecterptest.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSProjectERPtestSoap12" binding="tns:WSProjectERPtestSoap12">
+      <soap12:address location="http://desarrollo.sinco.net/sincook/erpnet/comunicaciones/serviciosweb/wsprojecterptest.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSProjectERPtestHttpGet" binding="tns:WSProjectERPtestHttpGet">
+      <http:address location="http://desarrollo.sinco.net/sincook/erpnet/comunicaciones/serviciosweb/wsprojecterptest.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSProjectERPtestHttpPost" binding="tns:WSProjectERPtestHttpPost">
+      <http:address location="http://desarrollo.sinco.net/sincook/erpnet/comunicaciones/serviciosweb/wsprojecterptest.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

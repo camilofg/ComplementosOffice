@@ -1,0 +1,16 @@
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\obj\Debug\ResolveAssemblyReference.cache
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppSincoWord.dll.config
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppSincoWord.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppSincoWord.pdb
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppExternas.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppExternas.pdb
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\obj\Debug\AppSincoWord.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\AppSincoWord\obj\Debug\AppSincoWord.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppSincoWord.dll.config
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppSincoWord.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppSincoWord.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppExternas.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\bin\Debug\AppExternas.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\obj\Debug\ResolveAssemblyReference.cache
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\obj\Debug\AppSincoWord.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\AppSincoWord\obj\Debug\AppSincoWord.pdb

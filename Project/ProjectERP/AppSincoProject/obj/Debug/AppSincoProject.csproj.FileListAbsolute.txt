@@ -1,0 +1,16 @@
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppSincoProject.dll.config
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppSincoProject.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppSincoProject.pdb
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppExternas.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppExternas.pdb
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\obj\Debug\ResolveAssemblyReference.cache
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\obj\Debug\AppSincoProject.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\AppSincoProject\obj\Debug\AppSincoProject.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppSincoProject.dll.config
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppSincoProject.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppSincoProject.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppExternas.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\bin\Debug\AppExternas.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\obj\Debug\ResolveAssemblyReference.cache
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\obj\Debug\AppSincoProject.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\AppSincoProject\obj\Debug\AppSincoProject.pdb

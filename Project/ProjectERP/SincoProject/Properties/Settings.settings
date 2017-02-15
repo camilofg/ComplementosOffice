@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SincoProject.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MsErrorIniciarArchivoLicencia" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se cargaron correctamente los datos de su licencia, consulte al administrador del sistema.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarArchivoLicencia" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se cargó correctamente el archivo de licencia.</Value>
+    </Setting>
+    <Setting Name="MsGuardarCambiosCompleto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cambios Guardados correctamente.</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

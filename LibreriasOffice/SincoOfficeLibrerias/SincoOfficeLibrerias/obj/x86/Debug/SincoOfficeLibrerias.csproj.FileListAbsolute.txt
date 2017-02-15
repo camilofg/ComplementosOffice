@@ -1,0 +1,16 @@
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\SincoOfficeLibrerias.dll.config
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\SincoOfficeLibrerias.dll
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\SincoOfficeLibrerias.pdb
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\AppExternas.dll
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\AppExternas.pdb
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\obj\x86\Debug\SincoOfficeLibrerias.dll
+D:\FuentesNET\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\obj\x86\Debug\SincoOfficeLibrerias.pdb
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\SincoOfficeLibrerias.dll.config
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\SincoOfficeLibrerias.dll
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\SincoOfficeLibrerias.pdb
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\AppExternas.dll
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\bin\x86\Debug\AppExternas.pdb
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\obj\x86\Debug\SincoOfficeLibrerias.dll
+D:\Backup ERPWEB\ComplementosOffice\LibreriasOffice\SincoOfficeLibrerias\SincoOfficeLibrerias\obj\x86\Debug\SincoOfficeLibrerias.pdb

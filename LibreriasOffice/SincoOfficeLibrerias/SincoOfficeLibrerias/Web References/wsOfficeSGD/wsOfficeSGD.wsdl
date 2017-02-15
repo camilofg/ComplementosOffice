@@ -1,0 +1,1598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConsultaDescriptoresCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Categoria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDescriptoresCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaDescriptoresCategoriaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FuenteDatosDescriptores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descriptor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Variables" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Busqueda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FuenteDatosDescriptoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FuenteDatosDescriptoresResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPrecedenciasDescriptor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdDescriptor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPrecedenciasDescriptorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPrecedenciasDescriptorResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRUDFuenteExterna">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idFuente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="activo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRUDFuenteExternaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CRUDFuenteExternaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar_x0020_Formatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuarioRegistro" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreTipologia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArchivoBinario" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="SFVid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubserieFormato" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLelementos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar_x0020_FormatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Guardar_x0020_FormatosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuarioRegistro" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreTipologia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArchivoBinario" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="SFVid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubserieFormato" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLelementos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlPasosUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar_x0020_Formatos_x0020_DiligenciadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Guardar_x0020_Formatos_x0020_DiligenciadosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeerArchivosFormatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaArchivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeerArchivosFormatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeerArchivosFormatosResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarArchivoFormato">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Archivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarArchivoFormatoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarArchivoFormatoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarDescriptorPorCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESdescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESobservacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEStipoDato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DCCcategoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESfuenteExterna" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarDescriptorPorCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarDescriptorPorCategoriaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaInformacionInicial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Categoria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaInformacionInicialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaInformacionInicialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroErroresComplementos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOGUIDerror" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOdescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOstackTrace" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOipCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOnombreUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOinformacionSistema" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOsessionIdUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOsessionIdEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOsessionIdSucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ECOfechaError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroErroresComplementosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistroErroresComplementosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarAccesoUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdSucursal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarAccesoUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarAccesoUsuariosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDescriptoresDocumentosExcel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InfoDescriptores" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDescriptoresDocumentosExcelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarDescriptoresDocumentosExcelResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarDescriptorCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESdescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESobservacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEStipoDato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DCCcategoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESfuenteExterna" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarDescriptorCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarDescriptorCategoriaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PasosResponsablesConsultaTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sucursal" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PasosResponsablesConsultaTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PasosResponsablesConsultaTSResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultaDescriptoresCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaDescriptoresCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDescriptoresCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaDescriptoresCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="FuenteDatosDescriptoresSoapIn">
+    <wsdl:part name="parameters" element="tns:FuenteDatosDescriptores" />
+  </wsdl:message>
+  <wsdl:message name="FuenteDatosDescriptoresSoapOut">
+    <wsdl:part name="parameters" element="tns:FuenteDatosDescriptoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPrecedenciasDescriptorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPrecedenciasDescriptor" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPrecedenciasDescriptorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPrecedenciasDescriptorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CRUDFuenteExternaSoapIn">
+    <wsdl:part name="parameters" element="tns:CRUDFuenteExterna" />
+  </wsdl:message>
+  <wsdl:message name="CRUDFuenteExternaSoapOut">
+    <wsdl:part name="parameters" element="tns:CRUDFuenteExternaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_FormatosSoapIn">
+    <wsdl:part name="parameters" element="tns:Guardar_x0020_Formatos" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_FormatosSoapOut">
+    <wsdl:part name="parameters" element="tns:Guardar_x0020_FormatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_Formatos_x0020_DiligenciadosSoapIn">
+    <wsdl:part name="parameters" element="tns:Guardar_x0020_Formatos_x0020_Diligenciados" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_Formatos_x0020_DiligenciadosSoapOut">
+    <wsdl:part name="parameters" element="tns:Guardar_x0020_Formatos_x0020_DiligenciadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosSoapIn">
+    <wsdl:part name="parameters" element="tns:LeerArchivosFormatos" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosSoapOut">
+    <wsdl:part name="parameters" element="tns:LeerArchivosFormatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarArchivoFormato" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarArchivoFormatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDescriptorPorCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarDescriptorPorCategoria" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDescriptorPorCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarDescriptorPorCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaInformacionInicialSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaInformacionInicial" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaInformacionInicialSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaInformacionInicialResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistroErroresComplementosSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistroErroresComplementos" />
+  </wsdl:message>
+  <wsdl:message name="RegistroErroresComplementosSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistroErroresComplementosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarAccesoUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarAccesoUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ValidarAccesoUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarAccesoUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDescriptoresDocumentosExcelSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarDescriptoresDocumentosExcel" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDescriptoresDocumentosExcelSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarDescriptoresDocumentosExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarDescriptorCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarDescriptorCategoria" />
+  </wsdl:message>
+  <wsdl:message name="GuardarDescriptorCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarDescriptorCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PasosResponsablesConsultaTSSoapIn">
+    <wsdl:part name="parameters" element="tns:PasosResponsablesConsultaTS" />
+  </wsdl:message>
+  <wsdl:message name="PasosResponsablesConsultaTSSoapOut">
+    <wsdl:part name="parameters" element="tns:PasosResponsablesConsultaTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDescriptoresCategoriaHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="Categoria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDescriptoresCategoriaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="FuenteDatosDescriptoresHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="Descriptor" type="s:string" />
+    <wsdl:part name="Variables" type="s:string" />
+    <wsdl:part name="Busqueda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FuenteDatosDescriptoresHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPrecedenciasDescriptorHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="IdDescriptor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPrecedenciasDescriptorHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CRUDFuenteExternaHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="idFuente" type="s:string" />
+    <wsdl:part name="descripcion" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="texto" type="s:string" />
+    <wsdl:part name="activo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CRUDFuenteExternaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_FormatosHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="nombreArchivo" type="s:string" />
+    <wsdl:part name="usuarioRegistro" type="s:string" />
+    <wsdl:part name="NombreTipologia" type="s:string" />
+    <wsdl:part name="IdEmpresa" type="s:string" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="ArchivoBinario" type="s1:StringArray" />
+    <wsdl:part name="SFVid" type="s:string" />
+    <wsdl:part name="SubserieFormato" type="s:string" />
+    <wsdl:part name="XMLelementos" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_FormatosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_Formatos_x0020_DiligenciadosHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="nombreArchivo" type="s:string" />
+    <wsdl:part name="usuarioRegistro" type="s:string" />
+    <wsdl:part name="NombreTipologia" type="s:string" />
+    <wsdl:part name="IdEmpresa" type="s:string" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="ArchivoBinario" type="s1:StringArray" />
+    <wsdl:part name="SFVid" type="s:string" />
+    <wsdl:part name="SubserieFormato" type="s:string" />
+    <wsdl:part name="XMLelementos" type="s:string" />
+    <wsdl:part name="IdSucursal" type="s:string" />
+    <wsdl:part name="XmlPasosUsuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_Formatos_x0020_DiligenciadosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="Archivo" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDescriptorPorCategoriaHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="DESid" type="s:string" />
+    <wsdl:part name="DESdescripcion" type="s:string" />
+    <wsdl:part name="DESobservacion" type="s:string" />
+    <wsdl:part name="DEStipoDato" type="s:string" />
+    <wsdl:part name="DCCcategoria" type="s:string" />
+    <wsdl:part name="DESfuenteExterna" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDescriptorPorCategoriaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaInformacionInicialHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="Categoria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaInformacionInicialHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RegistroErroresComplementosHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="ECOGUIDerror" type="s:string" />
+    <wsdl:part name="ECOdescripcion" type="s:string" />
+    <wsdl:part name="ECOstackTrace" type="s:string" />
+    <wsdl:part name="ECOipCliente" type="s:string" />
+    <wsdl:part name="ECOnombreUsuario" type="s:string" />
+    <wsdl:part name="ECOinformacionSistema" type="s:string" />
+    <wsdl:part name="ECOsessionIdUsuario" type="s:string" />
+    <wsdl:part name="ECOsessionIdEmpresa" type="s:string" />
+    <wsdl:part name="ECOsessionIdSucursal" type="s:string" />
+    <wsdl:part name="ECOfechaError" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RegistroErroresComplementosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ValidarAccesoUsuariosHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="IdUsuario" type="s:string" />
+    <wsdl:part name="IdEmpresa" type="s:string" />
+    <wsdl:part name="IdSucursal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidarAccesoUsuariosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDescriptoresDocumentosExcelHttpGetIn">
+    <wsdl:part name="IdArchivo" type="s:string" />
+    <wsdl:part name="InfoDescriptores" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDescriptoresDocumentosExcelHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GuardarDescriptorCategoriaHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="DESid" type="s:string" />
+    <wsdl:part name="DESdescripcion" type="s:string" />
+    <wsdl:part name="DESobservacion" type="s:string" />
+    <wsdl:part name="DEStipoDato" type="s:string" />
+    <wsdl:part name="DCCcategoria" type="s:string" />
+    <wsdl:part name="DESfuenteExterna" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuardarDescriptorCategoriaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PasosResponsablesConsultaTSHttpGetIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="tipo" type="s:string" />
+    <wsdl:part name="sucursal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PasosResponsablesConsultaTSHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDescriptoresCategoriaHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="Categoria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDescriptoresCategoriaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="FuenteDatosDescriptoresHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="Descriptor" type="s:string" />
+    <wsdl:part name="Variables" type="s:string" />
+    <wsdl:part name="Busqueda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FuenteDatosDescriptoresHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPrecedenciasDescriptorHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="IdDescriptor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPrecedenciasDescriptorHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CRUDFuenteExternaHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="idFuente" type="s:string" />
+    <wsdl:part name="descripcion" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="texto" type="s:string" />
+    <wsdl:part name="activo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CRUDFuenteExternaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_FormatosHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="nombreArchivo" type="s:string" />
+    <wsdl:part name="usuarioRegistro" type="s:string" />
+    <wsdl:part name="NombreTipologia" type="s:string" />
+    <wsdl:part name="IdEmpresa" type="s:string" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="ArchivoBinario" type="s1:StringArray" />
+    <wsdl:part name="SFVid" type="s:string" />
+    <wsdl:part name="SubserieFormato" type="s:string" />
+    <wsdl:part name="XMLelementos" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_FormatosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_Formatos_x0020_DiligenciadosHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="nombreArchivo" type="s:string" />
+    <wsdl:part name="usuarioRegistro" type="s:string" />
+    <wsdl:part name="NombreTipologia" type="s:string" />
+    <wsdl:part name="IdEmpresa" type="s:string" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="ArchivoBinario" type="s1:StringArray" />
+    <wsdl:part name="SFVid" type="s:string" />
+    <wsdl:part name="SubserieFormato" type="s:string" />
+    <wsdl:part name="XMLelementos" type="s:string" />
+    <wsdl:part name="IdSucursal" type="s:string" />
+    <wsdl:part name="XmlPasosUsuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Guardar_x0020_Formatos_x0020_DiligenciadosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="Archivo" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDescriptorPorCategoriaHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="DESid" type="s:string" />
+    <wsdl:part name="DESdescripcion" type="s:string" />
+    <wsdl:part name="DESobservacion" type="s:string" />
+    <wsdl:part name="DEStipoDato" type="s:string" />
+    <wsdl:part name="DCCcategoria" type="s:string" />
+    <wsdl:part name="DESfuenteExterna" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDescriptorPorCategoriaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaInformacionInicialHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="Categoria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaInformacionInicialHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RegistroErroresComplementosHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="ECOGUIDerror" type="s:string" />
+    <wsdl:part name="ECOdescripcion" type="s:string" />
+    <wsdl:part name="ECOstackTrace" type="s:string" />
+    <wsdl:part name="ECOipCliente" type="s:string" />
+    <wsdl:part name="ECOnombreUsuario" type="s:string" />
+    <wsdl:part name="ECOinformacionSistema" type="s:string" />
+    <wsdl:part name="ECOsessionIdUsuario" type="s:string" />
+    <wsdl:part name="ECOsessionIdEmpresa" type="s:string" />
+    <wsdl:part name="ECOsessionIdSucursal" type="s:string" />
+    <wsdl:part name="ECOfechaError" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RegistroErroresComplementosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ValidarAccesoUsuariosHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="IdUsuario" type="s:string" />
+    <wsdl:part name="IdEmpresa" type="s:string" />
+    <wsdl:part name="IdSucursal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidarAccesoUsuariosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDescriptoresDocumentosExcelHttpPostIn">
+    <wsdl:part name="IdArchivo" type="s:string" />
+    <wsdl:part name="InfoDescriptores" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDescriptoresDocumentosExcelHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GuardarDescriptorCategoriaHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="operacion" type="s:string" />
+    <wsdl:part name="DESid" type="s:string" />
+    <wsdl:part name="DESdescripcion" type="s:string" />
+    <wsdl:part name="DESobservacion" type="s:string" />
+    <wsdl:part name="DEStipoDato" type="s:string" />
+    <wsdl:part name="DCCcategoria" type="s:string" />
+    <wsdl:part name="DESfuenteExterna" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuardarDescriptorCategoriaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PasosResponsablesConsultaTSHttpPostIn">
+    <wsdl:part name="SessionId" type="s1:StringArray" />
+    <wsdl:part name="tipo" type="s:string" />
+    <wsdl:part name="sucursal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PasosResponsablesConsultaTSHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="wsOfficeSGDSoap">
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta Descriptores por Categoria</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaDescriptoresCategoriaSoapIn" />
+      <wsdl:output message="tns:ConsultaDescriptoresCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta las fuentes de datos de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:FuenteDatosDescriptoresSoapIn" />
+      <wsdl:output message="tns:FuenteDatosDescriptoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta las precedencias de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPrecedenciasDescriptorSoapIn" />
+      <wsdl:output message="tns:ConsultarPrecedenciasDescriptorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Administra información de fuentes externas</wsdl:documentation>
+      <wsdl:input message="tns:CRUDFuenteExternaSoapIn" />
+      <wsdl:output message="tns:CRUDFuenteExternaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar formatos de SGC</wsdl:documentation>
+      <wsdl:input name="Guardar_x0020_Formatos" message="tns:Guardar_x0020_FormatosSoapIn" />
+      <wsdl:output name="Guardar_x0020_Formatos" message="tns:Guardar_x0020_FormatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar formatos de SGC</wsdl:documentation>
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados" message="tns:Guardar_x0020_Formatos_x0020_DiligenciadosSoapIn" />
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados" message="tns:Guardar_x0020_Formatos_x0020_DiligenciadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Leer Formatos</wsdl:documentation>
+      <wsdl:input message="tns:LeerArchivosFormatosSoapIn" />
+      <wsdl:output message="tns:LeerArchivosFormatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda Formatos</wsdl:documentation>
+      <wsdl:input message="tns:GuardarArchivoFormatoSoapIn" />
+      <wsdl:output message="tns:GuardarArchivoFormatoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creación de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:AgregarDescriptorPorCategoriaSoapIn" />
+      <wsdl:output message="tns:AgregarDescriptorPorCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta información inicial.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaInformacionInicialSoapIn" />
+      <wsdl:output message="tns:ConsultaInformacionInicialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de Errores</wsdl:documentation>
+      <wsdl:input message="tns:RegistroErroresComplementosSoapIn" />
+      <wsdl:output message="tns:RegistroErroresComplementosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validación de acesso de usuarios</wsdl:documentation>
+      <wsdl:input message="tns:ValidarAccesoUsuariosSoapIn" />
+      <wsdl:output message="tns:ValidarAccesoUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza descriptores de un documento de excel. Formato de la Info de Descr.  IdDescriptor1|Valordescriptor1|ValorMostrarDesc1%IdDescriptor2|ValorDescriptor2|ValorMostrarDesc2...</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarDescriptoresDocumentosExcelSoapIn" />
+      <wsdl:output message="tns:ActualizarDescriptoresDocumentosExcelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GuardarDescriptorCategoria</wsdl:documentation>
+      <wsdl:input message="tns:GuardarDescriptorCategoriaSoapIn" />
+      <wsdl:output message="tns:GuardarDescriptorCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la lista de Responsables de cada una de las tareas siguientes al paso actual.  </wsdl:documentation>
+      <wsdl:input message="tns:PasosResponsablesConsultaTSSoapIn" />
+      <wsdl:output message="tns:PasosResponsablesConsultaTSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsOfficeSGDHttpGet">
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta Descriptores por Categoria</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaDescriptoresCategoriaHttpGetIn" />
+      <wsdl:output message="tns:ConsultaDescriptoresCategoriaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta las fuentes de datos de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:FuenteDatosDescriptoresHttpGetIn" />
+      <wsdl:output message="tns:FuenteDatosDescriptoresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta las precedencias de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPrecedenciasDescriptorHttpGetIn" />
+      <wsdl:output message="tns:ConsultarPrecedenciasDescriptorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Administra información de fuentes externas</wsdl:documentation>
+      <wsdl:input message="tns:CRUDFuenteExternaHttpGetIn" />
+      <wsdl:output message="tns:CRUDFuenteExternaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar formatos de SGC</wsdl:documentation>
+      <wsdl:input name="Guardar_x0020_Formatos" message="tns:Guardar_x0020_FormatosHttpGetIn" />
+      <wsdl:output name="Guardar_x0020_Formatos" message="tns:Guardar_x0020_FormatosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar formatos de SGC</wsdl:documentation>
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados" message="tns:Guardar_x0020_Formatos_x0020_DiligenciadosHttpGetIn" />
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados" message="tns:Guardar_x0020_Formatos_x0020_DiligenciadosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Leer Formatos</wsdl:documentation>
+      <wsdl:input message="tns:LeerArchivosFormatosHttpGetIn" />
+      <wsdl:output message="tns:LeerArchivosFormatosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda Formatos</wsdl:documentation>
+      <wsdl:input message="tns:GuardarArchivoFormatoHttpGetIn" />
+      <wsdl:output message="tns:GuardarArchivoFormatoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creación de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:AgregarDescriptorPorCategoriaHttpGetIn" />
+      <wsdl:output message="tns:AgregarDescriptorPorCategoriaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta información inicial.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaInformacionInicialHttpGetIn" />
+      <wsdl:output message="tns:ConsultaInformacionInicialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de Errores</wsdl:documentation>
+      <wsdl:input message="tns:RegistroErroresComplementosHttpGetIn" />
+      <wsdl:output message="tns:RegistroErroresComplementosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validación de acesso de usuarios</wsdl:documentation>
+      <wsdl:input message="tns:ValidarAccesoUsuariosHttpGetIn" />
+      <wsdl:output message="tns:ValidarAccesoUsuariosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza descriptores de un documento de excel. Formato de la Info de Descr.  IdDescriptor1|Valordescriptor1|ValorMostrarDesc1%IdDescriptor2|ValorDescriptor2|ValorMostrarDesc2...</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarDescriptoresDocumentosExcelHttpGetIn" />
+      <wsdl:output message="tns:ActualizarDescriptoresDocumentosExcelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GuardarDescriptorCategoria</wsdl:documentation>
+      <wsdl:input message="tns:GuardarDescriptorCategoriaHttpGetIn" />
+      <wsdl:output message="tns:GuardarDescriptorCategoriaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la lista de Responsables de cada una de las tareas siguientes al paso actual.  </wsdl:documentation>
+      <wsdl:input message="tns:PasosResponsablesConsultaTSHttpGetIn" />
+      <wsdl:output message="tns:PasosResponsablesConsultaTSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsOfficeSGDHttpPost">
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta Descriptores por Categoria</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaDescriptoresCategoriaHttpPostIn" />
+      <wsdl:output message="tns:ConsultaDescriptoresCategoriaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta las fuentes de datos de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:FuenteDatosDescriptoresHttpPostIn" />
+      <wsdl:output message="tns:FuenteDatosDescriptoresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta las precedencias de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPrecedenciasDescriptorHttpPostIn" />
+      <wsdl:output message="tns:ConsultarPrecedenciasDescriptorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Administra información de fuentes externas</wsdl:documentation>
+      <wsdl:input message="tns:CRUDFuenteExternaHttpPostIn" />
+      <wsdl:output message="tns:CRUDFuenteExternaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar formatos de SGC</wsdl:documentation>
+      <wsdl:input name="Guardar_x0020_Formatos" message="tns:Guardar_x0020_FormatosHttpPostIn" />
+      <wsdl:output name="Guardar_x0020_Formatos" message="tns:Guardar_x0020_FormatosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar formatos de SGC</wsdl:documentation>
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados" message="tns:Guardar_x0020_Formatos_x0020_DiligenciadosHttpPostIn" />
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados" message="tns:Guardar_x0020_Formatos_x0020_DiligenciadosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Leer Formatos</wsdl:documentation>
+      <wsdl:input message="tns:LeerArchivosFormatosHttpPostIn" />
+      <wsdl:output message="tns:LeerArchivosFormatosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda Formatos</wsdl:documentation>
+      <wsdl:input message="tns:GuardarArchivoFormatoHttpPostIn" />
+      <wsdl:output message="tns:GuardarArchivoFormatoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creación de descriptores</wsdl:documentation>
+      <wsdl:input message="tns:AgregarDescriptorPorCategoriaHttpPostIn" />
+      <wsdl:output message="tns:AgregarDescriptorPorCategoriaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta información inicial.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaInformacionInicialHttpPostIn" />
+      <wsdl:output message="tns:ConsultaInformacionInicialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registro de Errores</wsdl:documentation>
+      <wsdl:input message="tns:RegistroErroresComplementosHttpPostIn" />
+      <wsdl:output message="tns:RegistroErroresComplementosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validación de acesso de usuarios</wsdl:documentation>
+      <wsdl:input message="tns:ValidarAccesoUsuariosHttpPostIn" />
+      <wsdl:output message="tns:ValidarAccesoUsuariosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza descriptores de un documento de excel. Formato de la Info de Descr.  IdDescriptor1|Valordescriptor1|ValorMostrarDesc1%IdDescriptor2|ValorDescriptor2|ValorMostrarDesc2...</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarDescriptoresDocumentosExcelHttpPostIn" />
+      <wsdl:output message="tns:ActualizarDescriptoresDocumentosExcelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GuardarDescriptorCategoria</wsdl:documentation>
+      <wsdl:input message="tns:GuardarDescriptorCategoriaHttpPostIn" />
+      <wsdl:output message="tns:GuardarDescriptorCategoriaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la lista de Responsables de cada una de las tareas siguientes al paso actual.  </wsdl:documentation>
+      <wsdl:input message="tns:PasosResponsablesConsultaTSHttpPostIn" />
+      <wsdl:output message="tns:PasosResponsablesConsultaTSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsOfficeSGDSoap" type="tns:wsOfficeSGDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <soap:operation soapAction="http://tempuri.org/ConsultaDescriptoresCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <soap:operation soapAction="http://tempuri.org/FuenteDatosDescriptores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPrecedenciasDescriptor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <soap:operation soapAction="http://tempuri.org/CRUDFuenteExterna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <soap:operation soapAction="http://tempuri.org/Guardar Formatos" style="document" />
+      <wsdl:input name="Guardar_x0020_Formatos">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <soap:operation soapAction="http://tempuri.org/Guardar Formatos Diligenciados" style="document" />
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <soap:operation soapAction="http://tempuri.org/LeerArchivosFormatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <soap:operation soapAction="http://tempuri.org/GuardarArchivoFormato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <soap:operation soapAction="http://tempuri.org/AgregarDescriptorPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <soap:operation soapAction="http://tempuri.org/ConsultaInformacionInicial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <soap:operation soapAction="http://tempuri.org/RegistroErroresComplementos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <soap:operation soapAction="http://tempuri.org/ValidarAccesoUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <soap:operation soapAction="http://tempuri.org/ActualizarDescriptoresDocumentosExcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <soap:operation soapAction="http://tempuri.org/GuardarDescriptorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <soap:operation soapAction="http://tempuri.org/PasosResponsablesConsultaTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsOfficeSGDSoap12" type="tns:wsOfficeSGDSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaDescriptoresCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <soap12:operation soapAction="http://tempuri.org/FuenteDatosDescriptores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPrecedenciasDescriptor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <soap12:operation soapAction="http://tempuri.org/CRUDFuenteExterna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <soap12:operation soapAction="http://tempuri.org/Guardar Formatos" style="document" />
+      <wsdl:input name="Guardar_x0020_Formatos">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <soap12:operation soapAction="http://tempuri.org/Guardar Formatos Diligenciados" style="document" />
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <soap12:operation soapAction="http://tempuri.org/LeerArchivosFormatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <soap12:operation soapAction="http://tempuri.org/GuardarArchivoFormato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <soap12:operation soapAction="http://tempuri.org/AgregarDescriptorPorCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaInformacionInicial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <soap12:operation soapAction="http://tempuri.org/RegistroErroresComplementos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/ValidarAccesoUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarDescriptoresDocumentosExcel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <soap12:operation soapAction="http://tempuri.org/GuardarDescriptorCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <soap12:operation soapAction="http://tempuri.org/PasosResponsablesConsultaTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsOfficeSGDHttpGet" type="tns:wsOfficeSGDHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <http:operation location="/ConsultaDescriptoresCategoria" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <http:operation location="/FuenteDatosDescriptores" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <http:operation location="/ConsultarPrecedenciasDescriptor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <http:operation location="/CRUDFuenteExterna" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <http:operation location="/Guardar Formatos" />
+      <wsdl:input name="Guardar_x0020_Formatos">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos">
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <http:operation location="/Guardar Formatos Diligenciados" />
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <http:operation location="/LeerArchivosFormatos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <http:operation location="/GuardarArchivoFormato" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <http:operation location="/AgregarDescriptorPorCategoria" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <http:operation location="/ConsultaInformacionInicial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <http:operation location="/RegistroErroresComplementos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <http:operation location="/ValidarAccesoUsuarios" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <http:operation location="/ActualizarDescriptoresDocumentosExcel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <http:operation location="/GuardarDescriptorCategoria" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <http:operation location="/PasosResponsablesConsultaTS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsOfficeSGDHttpPost" type="tns:wsOfficeSGDHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ConsultaDescriptoresCategoria">
+      <http:operation location="/ConsultaDescriptoresCategoria" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuenteDatosDescriptores">
+      <http:operation location="/FuenteDatosDescriptores" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPrecedenciasDescriptor">
+      <http:operation location="/ConsultarPrecedenciasDescriptor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CRUDFuenteExterna">
+      <http:operation location="/CRUDFuenteExterna" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantilla">
+      <http:operation location="/Guardar Formatos" />
+      <wsdl:input name="Guardar_x0020_Formatos">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos">
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFormatoPlantillaDiligenciados">
+      <http:operation location="/Guardar Formatos Diligenciados" />
+      <wsdl:input name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Guardar_x0020_Formatos_x0020_Diligenciados">
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <http:operation location="/LeerArchivosFormatos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <http:operation location="/GuardarArchivoFormato" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDescriptorPorCategoria">
+      <http:operation location="/AgregarDescriptorPorCategoria" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaInformacionInicial">
+      <http:operation location="/ConsultaInformacionInicial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroErroresComplementos">
+      <http:operation location="/RegistroErroresComplementos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAccesoUsuarios">
+      <http:operation location="/ValidarAccesoUsuarios" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDescriptoresDocumentosExcel">
+      <http:operation location="/ActualizarDescriptoresDocumentosExcel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDescriptorCategoria">
+      <http:operation location="/GuardarDescriptorCategoria" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PasosResponsablesConsultaTS">
+      <http:operation location="/PasosResponsablesConsultaTS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsOfficeSGD">
+    <wsdl:port name="wsOfficeSGDSoap" binding="tns:wsOfficeSGDSoap">
+      <soap:address location="http://localhost/ERPNET/SGD/Comunicaciones/wsOfficeSGD.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsOfficeSGDSoap12" binding="tns:wsOfficeSGDSoap12">
+      <soap12:address location="http://localhost/ERPNET/SGD/Comunicaciones/wsOfficeSGD.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsOfficeSGDHttpGet" binding="tns:wsOfficeSGDHttpGet">
+      <http:address location="http://localhost/ERPNET/SGD/Comunicaciones/wsOfficeSGD.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsOfficeSGDHttpPost" binding="tns:wsOfficeSGDHttpPost">
+      <http:address location="http://localhost/ERPNET/SGD/Comunicaciones/wsOfficeSGD.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

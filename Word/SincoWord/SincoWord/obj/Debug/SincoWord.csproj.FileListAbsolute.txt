@@ -1,0 +1,50 @@
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\ResolveAssemblyReference.cache
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.FrmConfigurarComplemento.resources
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.Configuracion.FrmSelectSP.resources
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.FrmTreeView.resources
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.Properties.Resources.resources
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.WordRibbon.resources
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\GenerateResource.read.1.tlog
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\GenerateResource.write.1.tlog
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.dll.config
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.pdb
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.dll.manifest
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.vsto
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppExternas.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppSincoWord.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Word.v4.0.Utilities.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoOfficeLibrerias.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppExternas.pdb
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppSincoWord.pdb
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoOfficeLibrerias.pdb
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Word.v4.0.Utilities.xml
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.dll
+D:\FuentesNET\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.dll.config
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.dll.manifest
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoWord.vsto
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppExternas.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppSincoWord.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Word.v4.0.Utilities.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoOfficeLibrerias.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppExternas.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\AppSincoWord.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\SincoOfficeLibrerias.pdb
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\bin\Debug\Microsoft.Office.Tools.Word.v4.0.Utilities.xml
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\ResolveAssemblyReference.cache
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.FrmConfigurarComplemento.resources
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.Configuracion.FrmSelectSP.resources
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.FrmTreeView.resources
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.Properties.Resources.resources
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.WordRibbon.resources
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\GenerateResource.read.1.tlog
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\GenerateResource.write.1.tlog
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.dll
+D:\Backup ERPWEB\ComplementosOffice\Word\SincoWord\SincoWord\obj\Debug\SincoWord.pdb

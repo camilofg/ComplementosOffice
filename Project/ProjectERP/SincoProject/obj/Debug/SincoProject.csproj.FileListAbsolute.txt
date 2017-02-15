@@ -1,0 +1,48 @@
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.dll.config
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.pdb
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.dll.manifest
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.vsto
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppExternas.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppSincoProject.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoOfficeLibrerias.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppExternas.pdb
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppSincoProject.pdb
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoOfficeLibrerias.pdb
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\ResolveAssemblyReference.cache
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.Configuracion.FrmConfigProject.resources
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.Configuracion.FrmConfigWeekExcepts.resources
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.FrmLogin.resources
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.FrmSelectProject.resources
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.ProjectRibbon.resources
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.Properties.Resources.resources
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\GenerateResource.read.1.tlog
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\GenerateResource.write.1.tlog
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.dll
+D:\FuentesNET\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.dll.config
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.dll.manifest
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoProject.vsto
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppExternas.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppSincoProject.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoOfficeLibrerias.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppExternas.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\AppSincoProject.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\SincoOfficeLibrerias.pdb
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\ResolveAssemblyReference.cache
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.Configuracion.FrmConfigProject.resources
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.Configuracion.FrmConfigWeekExcepts.resources
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.FrmLogin.resources
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.FrmSelectProject.resources
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.ProjectRibbon.resources
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.Properties.Resources.resources
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\GenerateResource.read.1.tlog
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\GenerateResource.write.1.tlog
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.dll
+D:\Backup ERPWEB\ComplementosOffice\Project\ProjectERP\SincoProject\obj\Debug\SincoProject.pdb

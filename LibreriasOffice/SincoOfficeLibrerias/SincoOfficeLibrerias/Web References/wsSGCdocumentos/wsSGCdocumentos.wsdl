@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CRUDformatosSGC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Operacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRUDformatosSGCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CRUDformatosSGCResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeerArchivosFormatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaArchivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeerArchivosFormatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeerArchivosFormatosResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarArchivoFormato">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Archivo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarArchivoFormatoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarArchivoFormatoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CRUDformatosSGCSoapIn">
+    <wsdl:part name="parameters" element="tns:CRUDformatosSGC" />
+  </wsdl:message>
+  <wsdl:message name="CRUDformatosSGCSoapOut">
+    <wsdl:part name="parameters" element="tns:CRUDformatosSGCResponse" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosSoapIn">
+    <wsdl:part name="parameters" element="tns:LeerArchivosFormatos" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosSoapOut">
+    <wsdl:part name="parameters" element="tns:LeerArchivosFormatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarArchivoFormato" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarArchivoFormatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CRUDformatosSGCHttpGetIn">
+    <wsdl:part name="SessionID" type="s1:StringArray" />
+    <wsdl:part name="Operacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CRUDformatosSGCHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpGetIn">
+    <wsdl:part name="SessionID" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpGetIn">
+    <wsdl:part name="SessionID" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="Archivo" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CRUDformatosSGCHttpPostIn">
+    <wsdl:part name="SessionID" type="s1:StringArray" />
+    <wsdl:part name="Operacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CRUDformatosSGCHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpPostIn">
+    <wsdl:part name="SessionID" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LeerArchivosFormatosHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpPostIn">
+    <wsdl:part name="SessionID" type="s1:StringArray" />
+    <wsdl:part name="RutaArchivo" type="s:string" />
+    <wsdl:part name="Archivo" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GuardarArchivoFormatoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="wsSGCdocumentosSoap">
+    <wsdl:operation name="CRUDformatosSGC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Administra información de Formatos de Gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:CRUDformatosSGCSoapIn" />
+      <wsdl:output message="tns:CRUDformatosSGCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Formatos de gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:LeerArchivosFormatosSoapIn" />
+      <wsdl:output message="tns:LeerArchivosFormatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda formatos de gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:GuardarArchivoFormatoSoapIn" />
+      <wsdl:output message="tns:GuardarArchivoFormatoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsSGCdocumentosHttpGet">
+    <wsdl:operation name="CRUDformatosSGC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Administra información de Formatos de Gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:CRUDformatosSGCHttpGetIn" />
+      <wsdl:output message="tns:CRUDformatosSGCHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Formatos de gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:LeerArchivosFormatosHttpGetIn" />
+      <wsdl:output message="tns:LeerArchivosFormatosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda formatos de gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:GuardarArchivoFormatoHttpGetIn" />
+      <wsdl:output message="tns:GuardarArchivoFormatoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsSGCdocumentosHttpPost">
+    <wsdl:operation name="CRUDformatosSGC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Administra información de Formatos de Gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:CRUDformatosSGCHttpPostIn" />
+      <wsdl:output message="tns:CRUDformatosSGCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca Formatos de gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:LeerArchivosFormatosHttpPostIn" />
+      <wsdl:output message="tns:LeerArchivosFormatosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda formatos de gestión de calidad</wsdl:documentation>
+      <wsdl:input message="tns:GuardarArchivoFormatoHttpPostIn" />
+      <wsdl:output message="tns:GuardarArchivoFormatoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSGCdocumentosSoap" type="tns:wsSGCdocumentosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CRUDformatosSGC">
+      <soap:operation soapAction="http://tempuri.org/CRUDformatosSGC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <soap:operation soapAction="http://tempuri.org/LeerArchivosFormatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <soap:operation soapAction="http://tempuri.org/GuardarArchivoFormato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSGCdocumentosSoap12" type="tns:wsSGCdocumentosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CRUDformatosSGC">
+      <soap12:operation soapAction="http://tempuri.org/CRUDformatosSGC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <soap12:operation soapAction="http://tempuri.org/LeerArchivosFormatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <soap12:operation soapAction="http://tempuri.org/GuardarArchivoFormato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSGCdocumentosHttpGet" type="tns:wsSGCdocumentosHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CRUDformatosSGC">
+      <http:operation location="/CRUDformatosSGC" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <http:operation location="/LeerArchivosFormatos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <http:operation location="/GuardarArchivoFormato" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSGCdocumentosHttpPost" type="tns:wsSGCdocumentosHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CRUDformatosSGC">
+      <http:operation location="/CRUDformatosSGC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArchivosFormatos">
+      <http:operation location="/LeerArchivosFormatos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivoFormato">
+      <http:operation location="/GuardarArchivoFormato" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsSGCdocumentos">
+    <wsdl:port name="wsSGCdocumentosSoap" binding="tns:wsSGCdocumentosSoap">
+      <soap:address location="http://desarrollo/sincook/erpnet/GestionDeCalidad/Comunicaciones/ServiciosWeb/wsSGCdocumentos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSGCdocumentosSoap12" binding="tns:wsSGCdocumentosSoap12">
+      <soap12:address location="http://desarrollo/sincook/erpnet/GestionDeCalidad/Comunicaciones/ServiciosWeb/wsSGCdocumentos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSGCdocumentosHttpGet" binding="tns:wsSGCdocumentosHttpGet">
+      <http:address location="http://desarrollo/sincook/erpnet/GestionDeCalidad/Comunicaciones/ServiciosWeb/wsSGCdocumentos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSGCdocumentosHttpPost" binding="tns:wsSGCdocumentosHttpPost">
+      <http:address location="http://desarrollo/sincook/erpnet/GestionDeCalidad/Comunicaciones/ServiciosWeb/wsSGCdocumentos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

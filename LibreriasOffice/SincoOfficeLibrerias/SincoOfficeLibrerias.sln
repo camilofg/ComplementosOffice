@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincoOfficeLibrerias", "SincoOfficeLibrerias\SincoOfficeLibrerias.csproj", "{B8C09692-A801-45AC-880E-39728DB1C719}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://appsinco:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SincoOfficeLibrerias\\SincoOfficeLibrerias.csproj
+		SccProjectName1 = SincoOfficeLibrerias
+		SccLocalPath1 = SincoOfficeLibrerias
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8C09692-A801-45AC-880E-39728DB1C719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C09692-A801-45AC-880E-39728DB1C719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C09692-A801-45AC-880E-39728DB1C719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C09692-A801-45AC-880E-39728DB1C719}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

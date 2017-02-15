@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SincoOfficeLibrerias.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SincoOfficeLibrerias_wsOfficeSGD_wsOfficeSGD" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ERPNET/SGD/Comunicaciones/wsOfficeSGD.asmx</Value>
+    </Setting>
+    <Setting Name="SincoOfficeLibrerias_wsSGCdocumentos_wsSGCdocumentos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desarrollo/sincook/erpnet/GestionDeCalidad/Comunicaciones/ServiciosWeb/wsSGCdocumentos.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

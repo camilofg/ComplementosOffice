@@ -1,0 +1,183 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SincoExcel.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MsGuardarCambiosCompleto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cambios Guardados correctamente.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarArchivoLicencia" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se cargó correctamente el archivo de licencia.</Value>
+    </Setting>
+    <Setting Name="MsErrorCambiarColorConfiguracion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se actualizó el valor del nuevo color.</Value>
+    </Setting>
+    <Setting Name="MsErrorIniciarArchivoLicencia" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se cargaron correctamente los datos de su licencia, consulte al administrador del sistema.</Value>
+    </Setting>
+    <Setting Name="MsErrorDatosLoginUsuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Datos incorrectos, Verifique la contraseña o consulte con el administrador del sistema.</Value>
+    </Setting>
+    <Setting Name="MsCompletarDatosRequeridosLogin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Por favor complete todos los campos.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarListaSucursalesLogin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se cargó la lista de sucursales del usuario, verifique que su archivo de licencia sea válido y que tenga conexión con SINCO ERP.</Value>
+    </Setting>
+    <Setting Name="MsErrorCreacionControl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se creó el control, verifique que esté ubicado en una celda Válida.</Value>
+    </Setting>
+    <Setting Name="MsPreguntaAgregarFuenteExterna" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea agregar la nueva Fuente externa?</Value>
+    </Setting>
+    <Setting Name="MsErrorModificarCeldaFuenteExterna" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El valor de la celda para la fuente externa no fué modificado.</Value>
+    </Setting>
+    <Setting Name="MsPreguntaEliminarFueneExterna" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Esta seguro que desea eliminar la fuente externa?</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarFuenteExterna" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se Eliminó la Fuente Externa, verifique que no este asociado previamente a un descriptor.</Value>
+    </Setting>
+    <Setting Name="MsSeleccionarFuenteExterna" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Seleccione una fuente externa por favor.</Value>
+    </Setting>
+    <Setting Name="MsPreguntaConfirmarActualizarDescriptor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El descriptor ya está registrado, desea actualizarlo?</Value>
+    </Setting>
+    <Setting Name="MsErrorAgregarDescriptor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se agregó el descriptor. Verifique que tenga seleccionada una categoria válida</Value>
+    </Setting>
+    <Setting Name="MsCompletarDatosRequeridosDescriptor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Por favor complete todos los campos.</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarFilaExcel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se puede eliminar la fila seleccionada por que tiene descriptores asociados.</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarColumnaExcel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se puede eliminar la Columna seleccionada por que tiene descriptores asociados.</Value>
+    </Setting>
+    <Setting Name="MsErrorOpcionesDiseñoExcel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se completó la operación.</Value>
+    </Setting>
+    <Setting Name="MsPreguntaEliminarDescriptorTabla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea eliminar el descriptor de la tabla?</Value>
+    </Setting>
+    <Setting Name="MSCambiarNombreTablaDuplicado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ya existe una tabla llamada: {0}   .  No puede crear dos tablas con el mismo nombre, por favor cambie el nombre de la tabla.</Value>
+    </Setting>
+    <Setting Name="MsErrorPlantillaNoValida" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">La hoja actual no esta asociada a una plantilla, por favor abra una plantilla válida.</Value>
+    </Setting>
+    <Setting Name="MsCompletarInformacionRequeridaCreacionTabla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Los campos: Nombre de Tabla y número de Filas son Obligatorios.  Verifique que haya añadido columnas a la tabla.</Value>
+    </Setting>
+    <Setting Name="MsInformacionDescriptorPrincipalRegistrado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ya existe un descriptor principal en el formato.  Recuerde que solo debe crear un descriptor principal por formato.</Value>
+    </Setting>
+    <Setting Name="MsEliminarControl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea eliminar el control?</Value>
+    </Setting>
+    <Setting Name="MsEliminarControlTabla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El control pertenece a una tabla de datos, desea eliminar la tabla?</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarControl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El elemento: {0}  no se eliminó.</Value>
+    </Setting>
+    <Setting Name="MsControlesTablaEliminadosCorrectamente" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Los elementos de la tabla fueron eliminados correctamente.</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarControlesTabla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Algunos elementos de la tabla no se eliminaron.</Value>
+    </Setting>
+    <Setting Name="MsConfirmarEliminarDescriptor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea eliminar el elemento:  {0} ?</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarDescriptor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se eliminó el elemento, verifique que sea un descriptor válido.</Value>
+    </Setting>
+    <Setting Name="MsRequeridoAgregarDescriptor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Los campos categoria y descriptor son obligatorios.</Value>
+    </Setting>
+    <Setting Name="MsErrorActualizarArbolCategorias" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se actualizó la información del arbol de categorias.</Value>
+    </Setting>
+    <Setting Name="MsErrorEditarRegistroFuenteExterna" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No puede editar la fila seleccionada.</Value>
+    </Setting>
+    <Setting Name="MsPreguntaCargarFormatoExistente" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El formato tiene asociado un archivo, desea cargarlo?</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarArchivo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ocurrió un error al cargar el archivo. Verifique que el archivo esté correctamente creado. </Value>
+    </Setting>
+    <Setting Name="MsErrorVerificarConfiguracionISO" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Verifique la tabla de configuración de SGC.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarControlesTipologia" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Algunos elementos no se crearon correctamente.</Value>
+    </Setting>
+    <Setting Name="MsPlantillaCreadaCorrectamente" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Plantilla de Formato Creada Correctamente.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarPlantilla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se cargó correctamente la plantila.</Value>
+    </Setting>
+    <Setting Name="MsCerrarFormatoAbierto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Existe un formato abierto, por favor cierre el formato. </Value>
+    </Setting>
+    <Setting Name="MsSeleccionarFormato" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Por favor seleccione un formato.</Value>
+    </Setting>
+    <Setting Name="MsResultadoValidacionesOK" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Las validaciones son correctas.</Value>
+    </Setting>
+    <Setting Name="MsConfigurarRutaTemporal" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Por favor, configure una carpeta temporal para el complemento Sinco ERP.</Value>
+    </Setting>
+    <Setting Name="MsSesionCerrada" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Su sesión ha expirado.  Desea iniciar nuevamente una sesión?</Value>
+    </Setting>
+    <Setting Name="MsGuardarPlantilla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea guardar la plantilla actual?</Value>
+    </Setting>
+    <Setting Name="MsErrorGuardarFormato" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El formato no se registró correctamente.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarControl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Error al intentar cargar los controles creados, por favor vuelva a abrir el formato.</Value>
+    </Setting>
+    <Setting Name="MsPreguntaGuardarFormatoDiligenciado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea guardar el formato diligenciado actual?</Value>
+    </Setting>
+    <Setting Name="MsVolvarCargarFormato" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea volver a cargar el formato?</Value>
+    </Setting>
+    <Setting Name="MsCerrarFormato" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Desea cerrar el Formato actual?</Value>
+    </Setting>
+    <Setting Name="MsErrorFormatoTextoIngresado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El texto ingresado no es correcto.  Tipo de Dato:  {0}</Value>
+    </Setting>
+    <Setting Name="MsErrorDescriptoresFaltantes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Faltan los siguientes descriptores obligatorios o su contenido no es correcto: </Value>
+    </Setting>
+    <Setting Name="MsGuardarFormatoCorrecto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El Formato se guardó correctamente.</Value>
+    </Setting>
+    <Setting Name="MsErrorCargarInformacionInicial" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se actualizó la información.</Value>
+    </Setting>
+    <Setting Name="MsErrorCrearTabla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No se creó el control Tabla de Datos.</Value>
+    </Setting>
+    <Setting Name="MsErrorEliminarDescriptorSGD" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No fue posible eliminar el descriptor, es posible que se encuentre en uso en la aplicación.</Value>
+    </Setting>
+    <Setting Name="MsErrorAgregarDescriptorTabla" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">El descriptor seleccionado ya se encuentra registrado en la tabla.</Value>
+    </Setting>
+    <Setting Name="MsGuardarFormatoOpcionGuardar" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Tiene un formato asociado al sistema de Gestión de Calidad abierto, recuerde que si desea guardarlo debe utilizar la opción Guardar del Menu de Sinco ERP.</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
